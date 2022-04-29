@@ -9,7 +9,11 @@ public class Main {
 	public static Scanner scanner = new Scanner(System.in);
 
 	public static int userMenu() {
-		System.out.println(" 1.To display\n 2. push\n 3. exit");
+		System.out.println(" 1.To display\r\n"
+				+ " 2. push\r\n"
+				+ " 3. pop \r\n"
+				+ " 4. peek \r\n"
+				+ " 5. exit");
 		int choice = scanner.nextInt();
 		return choice;
 	}
@@ -29,6 +33,14 @@ public class Main {
 				System.out.println("Enter element to insert into the queue : ");
 				int element = scanner.nextInt();
 				stackImplementation.push(element);
+				flag = true;
+				break;
+			case 3:
+				stackImplementation.pop();
+				flag = true;
+				break;
+			case 4:
+				System.out.print("Top element" + stackImplementation.peek());
 				flag = true;
 				break;
 			default:
