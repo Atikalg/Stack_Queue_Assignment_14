@@ -32,5 +32,25 @@ public class StackImplementation {
 			top = node;
 		}
 	}
-
+	// pop method
+	public void pop() {
+		if(top == null) {
+			System.out.println("Stack is empty.");
+		}
+		else {
+			Node temp = top;
+			System.out.println("Removing " + temp.data);
+			top = top.next;
+		}
+	}
+	// peek method
+	public int peek() {
+		if(top != null) {
+			return top.data;
+		}
+		else {
+			System.out.println("Stack is empty.");
+			return -1;
+		}
+	}
 }
